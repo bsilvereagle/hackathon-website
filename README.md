@@ -15,5 +15,5 @@ wants
 -----
 
 I'd prefer it be a static website, clean and nice. We can use any materials
-from the (old hackathon website)[https://library.osu.edu/find/hackathon] or
-also (the twitter)[https://twitter.com/@osuhackathon].
+from the [old hackathon website](https://library.osu.edu/find/hackathon) or
+also [the twitter](https://twitter.com/@osuhackathon).
