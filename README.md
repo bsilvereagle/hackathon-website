@@ -6,7 +6,8 @@ Official website for the OSU Hackathon
 requirements
 ------------
 
-* Sections of our report, presented as individual posts / pages
+* Sections of [our report](http://arnab.org/files/HackathonReport.pdf),
+presented as individual posts / pages
 * A Call for sponsors
 * Catalog of past winners
 * Timeline of the next event
