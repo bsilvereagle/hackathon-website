@@ -22,5 +22,11 @@ also [the twitter](https://twitter.com/@osuhackathon).
 
 # Dev environment
 
-- Ruby 1.9.3: In ubuntu: `sudo apt-get install ruby1.9.1 ruby1.9.1-dev ruby rubygems ruby-bundler` yubuntu weirdness)
-- `bundle install` will take care of dependencies
+- Ruby 1.9.3: In Ubuntu 12.04: `
+
+    sudo apt-get install ruby 1.9.3
+    sudo apt-get install rubygems ruby-bundler
+    cd /etc/alternatives
+    sudo ln -sf /usr/bin/ruby1.9.3 ruby
+
+- bundle install` will take care of dependencies
