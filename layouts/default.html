@@ -1,0 +1,30 @@
+!!! 5
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %title
+      The OSU Hackathon
+      = item[:title]
+    %link{:rel => "stylesheet", :href => "/assets/css/app.css" }
+    %script{:src => "/assets/js/foundation.js" }
+  %body
+    .header
+      .contain-to-grid
+        %nav.top-bar
+          %ul.title-area
+            %li.name
+              %h1
+                %a{:href => "/"} OSU Hackathon
+            %li.toggle-topbar
+              %a{:href => "#"}
+          %section.top-bar-section
+            %ul.right
+              %li
+                %a{:href => "/about/"} About
+              %li
+                %a{:href=> "/winners/"} Winners
+              %li
+                %a{:href => "/sponsors/"} Sponsors
+    .row
+      .twelve.columns
+        = yield
