@@ -46,25 +46,25 @@ compile '*' do
       filter :erb
       filter :kramdown
       filter :relativize_paths, :type => :html
-    #else
-     # raise "Filter is not configured for #{item.identifier} in Rules file."
+    else
+     raise "Filter is not configured for #{item.identifier} in Rules file."
     end
     layout 'default'
   end
 end
 
 route 'assets/img/*' do
-  #ignore images for now
+  # Just put them there without changing anything
+  item.identifier.chop + '.' + item[:extension]
 end
 
 route 'assets/js/*' do
   filename = File.basename(item.identifier)
-  '/assets/' + filename + '.js' if @config[:javascripts][:passthrough].include?(filename)
+  '/assets/js/' + filename + '.js' if @config[:javascripts][:passthrough].include?(filename)
 end
 
-route 'assets/css/*' do
-  # flatten assets to assets/ similar to rails
-  '/assets/' + File.basename(item.identifier) + '.css'
+route 'assets/css/*/' do
+  '/assets/css/' + File.basename(item.identifier) + '.css'
 end
 
 route '*' do

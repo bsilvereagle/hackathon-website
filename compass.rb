@@ -9,6 +9,7 @@ css_dir = "output/assets"
 images_dir = "content/assets/img"
 javascripts_dir = "content/assets/js"
 sass_dir = "content/assets/css"
+images_dir = "content/assets/img"
 
 # -----------------------------------------------
 # Output

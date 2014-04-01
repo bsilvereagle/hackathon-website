@@ -62,7 +62,7 @@ data_sources:
 javascripts:
     compile:
         - jquery
-        - foundation.topbar
+        - app
+        - foundation
     passthrough:
         - modernizr.foundation
-        - app
