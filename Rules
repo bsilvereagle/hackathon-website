@@ -12,19 +12,61 @@
 #   “content/about.html”). To select all children, grandchildren, … of an
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
- 
+
+require 'compass'
+
+Compass.add_project_configuration 'compass.rb'
+
+compile 'assets/css/*' do
+  filter :sass, Compass.sass_engine_options.merge(:syntax => item[:extension].to_sym)
+  filter :relativize_paths, :type => :css
+end
+
+compile 'assets/js/*' do
+  filter :erb
+  filter :uglify_js if @config[:javascripts][:passthrough].include?(File.basename(item.identifier))
+end
+
 compile '*' do
-  if item[:extension] == 'css'
-    filter :relativize_paths, :type => :css
-  elsif item.binary?
+  if item.binary?
     # don’t filter binary items
   else
-    filter :erb
+  	# https://github.com/chickenboot/vintageinvite/blob/master/Rules#L54-L68
+    # mgutz: https://github.com/mgutz/nanoc3_blog/blob/master/Rules
+    # item[:extension] returns 'html.erb' for multi-dotted filename
+    ext = item[:extension].nil? ? nil : item[:extension].split('.').last
+
+    if ext == 'erb'
+      filter :erb
+      filter :relativize_paths, :type => :html
+    elsif ext == 'haml' || ext.nil?
+      filter :haml
+      filter :relativize_paths, :type => :html
+    elsif ext == 'md' || ext == 'markdown'
+      filter :erb
+      filter :kramdown
+      filter :relativize_paths, :type => :html
+    #else
+     # raise "Filter is not configured for #{item.identifier} in Rules file."
+    end
     layout 'default'
-    filter :relativize_paths, :type => :html
   end
 end
- 
+
+route 'assets/img/*' do
+  #ignore images for now
+end
+
+route 'assets/js/*' do
+  filename = File.basename(item.identifier)
+  '/assets/' + filename + '.js' if @config[:javascripts][:passthrough].include?(filename)
+end
+
+route 'assets/css/*' do
+  # flatten assets to assets/ similar to rails
+  '/assets/' + File.basename(item.identifier) + '.css'
+end
+
 route '*' do
   if item[:extension] == 'css'
     # Write item with identifier /foo/ to /foo.css
@@ -38,4 +80,4 @@ route '*' do
   end
 end
  
-layout '*', :erb
+layout '*', :haml, :format => :html5
