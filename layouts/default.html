@@ -3,7 +3,7 @@
   %head
     %meta{:charset => "utf-8"}
     %title
-      OSU Hackathon -
+      The OSU Hackathon
       = item[:title]
     %link{:rel => "stylesheet", :href => "/assets/css/app.css" }
     %script{:src => "/assets/js/foundation.js" }
@@ -20,9 +20,11 @@
           %section.top-bar-section
             %ul.right
               %li
-                %a{:href => "/#about"} About
+                %a{:href => "/about/"} About
               %li
-                %a{:href => "/#sponsors"} Sponsors
+                %a{:href=> "/winners/"} Winners
+              %li
+                %a{:href => "/sponsors/"} Sponsors
     .row
       .twelve.columns
         = yield
