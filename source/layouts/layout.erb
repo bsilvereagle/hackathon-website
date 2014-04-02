@@ -8,13 +8,38 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Hackathon" %></title>
+    <title><%= current_page.data.title || "The OSU Hackathon" %></title>
     <%= stylesheet_link_tag "normalize", "foundation" %>
     <%= javascript_include_tag  "vendor/modernizr" %>
   </head>
 
   <body class="<%= page_classes %>">
+    <div class="contain-to-grid">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="#">The OSU Hackathon</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li class=""><a href="#">#</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
     <%= yield %>
+    <hr>
+    <footer>
+      <div class="row">
+        <div class="small-12 large-12 columns">
+          <p><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a> The Ohio State University <a href="opensource.osu.edu">Open Source Club</a>, 2014</p>
+        </div>
+      </div>
+    </footer>
     <%= javascript_include_tag  "all" %>
   </body>
 </html>
