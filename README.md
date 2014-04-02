@@ -25,10 +25,10 @@ also [the twitter](https://twitter.com/@osuhackathon).
 
 - Ruby 1.9.3: In Ubuntu 12.04:
 ```
-    sudo apt-get install ruby 1.9.3
+    sudo apt-get install ruby1.9.3
     sudo apt-get install rubygems ruby-bundler
     cd /etc/alternatives
     sudo ln -sf /usr/bin/ruby1.9.3 ruby
     bundle install
 ```
-- bundle install will take care of dependencies
+- `bundle install` will take care of dependencies
