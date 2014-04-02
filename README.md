@@ -32,3 +32,5 @@ also [the twitter](https://twitter.com/@osuhackathon).
     bundle install
 ```
 - `bundle install` will take care of dependencies
+- `bundle exec middleman` will start a server at http://localhost:4567/
+- `bundle exec middleman build` will create the static site and automatically clean the build directory. 
