@@ -7,5 +7,8 @@ gem "middleman", "~>3.2.2"
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
 
+# a js runtime
+gem "therubyracer"
+
 # For faster file watcher updates on Windows:
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
