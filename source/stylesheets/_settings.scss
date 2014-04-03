@@ -1130,8 +1130,8 @@
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: #999;
-$topbar-bg: $topbar-bg-color;
+$topbar-bg-color: #e7e7e7;
+$topbar-bg: $topbar-bg-color url("/images/bg-navbar.png") left bottom repeat-x !default;
 
 // Height and margin
 // $topbar-height: 45px;
