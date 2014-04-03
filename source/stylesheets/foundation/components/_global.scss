@@ -208,9 +208,10 @@ $base-line-height: 150% !default;
 }
 
 // We use these to control various global styles
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 $body-bg: #fff !default;
 $body-font-color: #222 !default;
-$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+$body-font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
 $body-font-weight: normal !default;
 $body-font-style: normal !default;
 
@@ -229,12 +230,12 @@ $opposite-direction: right !default;
   $opposite-direction: left;
 }
 // We use these as default colors throughout
-$primary-color: #008CBA !default;
+$primary-color: #bb0000 !default;
 $secondary-color: #e7e7e7 !default;
 $alert-color: #f04124 !default;
-$success-color: #43AC6A !default;
-$warning-color: #f08a24 !default;
-$info-color: #a0d3e8 !default;
+$success-color: #909738 !default;
+$warning-color: #d65828 !default;
+$info-color: #92b0d7 !default;
 
 // We use these to make sure border radius matches unless we want it different.
 $global-radius: 3px !default;

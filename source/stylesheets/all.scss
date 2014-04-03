@@ -39,3 +39,41 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+.welcome {
+  background: #373535 url("/images/bg-buckeyepattern.jpg") top center repeat-x;
+  padding-top: 2em;
+  * {
+    color: #fff;
+  }
+}
+footer {
+  background-color: #373535;
+  padding-top: 1.0625rem;
+  * {
+    color: #fff;
+  }
+  img#footer-logo {
+    margin: 0 10px 0 0;
+  }
+}
+button, .button {
+  white-space: nowrap;
+}
+#stats span.number {
+  display: block;
+  font-size: 200%;
+}
+div#nav-parent {
+  border-bottom: 5px solid $primary-color;
+}
+#report {
+  padding-top: 0.875rem;
+}
+blockquote.pull-quote{
+  float: right;
+  width: 250px;
+}
+ul.author-list {
+  color: lighten($body-font-color, 30%);
+}

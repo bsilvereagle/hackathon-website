@@ -16,7 +16,7 @@
  </head>
 
   <body class="<%= page_classes %>">
-    <div class="contain-to-grid">
+    <div class="contain-to-grid" id="nav-parent">
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
           <li class="name">
@@ -34,20 +34,19 @@
       </nav>
     </div>
     <%= yield %>
-    <hr>
     <footer>
       <div class="row">
         <div class="small-12 medium-10 large-10 columns">
           <ul class="inline-list">
-            <li><a href="//opensource.osu.edu"><img src="images/footer-osc-white.png" height="30px"width ="30px">Open Source Club</a></li>
+            <li><a href="http://opensource.osu.edu"><img src="images/footer-osc-white.png" height="30px"width ="30px" id="footer-logo">Open Source Club</a></li>
             <li><a href="https://opensource.osu.edu/about">About</a></li>
             <li><a href="https://opensource.osu.edu/contact">Contact</a></li>
             <li><a href="https://opensource.osu.edu/club_meetings">Join</a></li>
           </ul>
           
         </div>
-        <div class="small-12 medium-2 large-2 columns">
-          <a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="images/footer-by-sa.png" alt="Creative Commons Attribution-Share Alike 4.0" width="80px"></a>
+        <div class="small-12 medium-2 large-2 columns" id="logo">
+          <a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="images/footer-by-sa.png" alt="Creative Commons Attribution-Share Alike 4.0"></a>
         <div>
       </div>
     </footer>
