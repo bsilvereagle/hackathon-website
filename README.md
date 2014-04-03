@@ -34,3 +34,9 @@ also [the twitter](https://twitter.com/@osuhackathon).
 - `bundle install` will take care of dependencies
 - `bundle exec middleman` will start a server at http://localhost:4567/
 - `bundle exec middleman build` will create the static site and automatically clean the build directory. 
+
+# Copyright and License
+
+Where possible, content is copyright The Ohio State University Open Source Club and is distributed under a [Creative Commons Attribution-Share Alike 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/). 
+
+However, this does not apply to all assets in this project. For a list of objects excluded from the CC-BY-SA license, see `source/copyright.html.erb`. 
