@@ -39,3 +39,28 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+.welcome {
+  background-color: #272727;
+  padding-top: 2em;
+  * {
+    color: #fff;
+  }
+}
+footer {
+  background-color: #272727;
+  padding-top: 1.0625rem;
+  * {
+    color: #fff;
+  }
+  img#footer-logo {
+    margin: 0 10px 0 0;
+  }
+}
+button, .button {
+  white-space: nowrap;
+}
+#stats span.number {
+  display: block;
+  font-size: 200%;
+}
