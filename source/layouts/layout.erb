@@ -8,8 +8,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "hack.osu" %></title>
     <%= stylesheet_link_tag "all" %>
+    <title><%= current_page.data.title || "Hack.OSU" %></title>
+    <%= stylesheet_link_tag "all", "foundation" %>
     <%= javascript_include_tag  "vendor/modernizr" %>
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
@@ -21,7 +22,7 @@
         <nav class="top-bar" data-topbar>
           <ul class="title-area">
             <li class="name">
-              <h1><%= link_to 'hack.osu', '/index.html' %></h1>
+			<h1><%= link_to '<b>HACK</b>.OSU', '/index.html' %></h1>
             </li>
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
           </ul>
