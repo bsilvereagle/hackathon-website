@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Use title if it's in the page YAML frontmatter -->
     <%= stylesheet_link_tag "all" %>
-    <title><%= current_page.data.title || "Hack.OSU" %></title>
+    <title><%= current_page.data.title || "The OSU Hackathon" %></title>
     <%= stylesheet_link_tag "all", "foundation" %>
     <%= javascript_include_tag  "vendor/modernizr" %>
     <!-- Favicon -->
@@ -22,7 +22,7 @@
         <nav class="top-bar" data-topbar>
           <ul class="title-area">
             <li class="name">
-			<h1><%= link_to '<b>HACK</b>.OSU', '/index.html' %></h1>
+			<h1><%= link_to 'The <b>OSU</b> Hackathon', '/index.html' %></h1>
             </li>
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
           </ul>
